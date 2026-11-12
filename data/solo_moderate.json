@@ -1,0 +1,25 @@
+{
+  "scenario": "One adult, moderate day hike, illustrative classroom instance",
+  "distance_km": 10,
+  "ascent_m": 500,
+  "duration_hours_assumed": 4,
+  "overnight": false,
+  "hiker_body_mass_kg_assumed": 70,
+  "planning_pack_limit_kg": 7,
+  "fixed_kit_g_assumed": 2300,
+  "water_l_assumed": 2.5,
+  "water_mass_g_approximated": 2500,
+  "food_inventory": [6, 2],
+  "food_targets": {"energy_kcal_assumed": 630, "protein_g_assumed": 33},
+  "food_coefficients": [
+    {"name": "Mission Soft Taco Restaurant Style Flour Tortilla", "serving_g": 50, "energy_kcal": 140, "protein_g": 4, "source_id": "R7"},
+    {"name": "StarKist Light Tuna in Water pouch", "serving_g": 74, "energy_kcal": 70, "protein_g": 17, "source_id": "R8"}
+  ],
+  "simplex_lp": {
+    "names": ["yT", "yU"],
+    "A": [[140, 70], [4, 17], [1, 0], [0, 1]],
+    "b": [350, 25, 6, 2],
+    "c": [50, 74]
+  },
+  "scope": "Continuous food servings. Nutrition targets, inventory, route and kit masses are classroom assumptions. Reserve food is fixed and receives no credit toward the ration targets. Product nutrition uses rounded label declarations."
+}

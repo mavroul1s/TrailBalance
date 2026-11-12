@@ -1,0 +1,14 @@
+.build/
+.chart-data-*/
+.codex-finalizer/
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+node_modules/
+.~lock.*#
+# Local proposals and teaching material remain private source documents.
+/*.docx
+/*.pptx
+/SimplexComplexity_tex-4.pdf

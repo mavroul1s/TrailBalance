@@ -1,6 +1,6 @@
-# TrailBalance
+# Trail Balance
 
-**Linear Programming course project, University of Thessaly.** TrailBalance studies how to meet hiking needs with limited backpack capacity. The long-term proposal covers selecting gear and distributing it fairly among hikers using mixed-integer linear programming.
+**Linear Programming course project, University of Thessaly.** Trail Balance studies how to meet hiking needs with limited backpack capacity. The long-term proposal covers selecting gear and distributing it fairly among hikers using mixed-integer linear programming.
 
 The first milestone is deliberately smaller: **one moderate day hike, fixed essential equipment and water, and two continuous food quantities solved by the primal simplex method taught in class.** A website and the full group model are future work.
 

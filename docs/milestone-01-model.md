@@ -12,6 +12,8 @@ The example uses `C = 0.10 × 70 = 7 kg` as a planning constraint, drawing on th
 
 ## Variables and data
 
+The presentation uses indexed notation: `x₁ = t`, `x₂ = u`, `y₁ = yT` and `y₂ = yU`. Its slacks `s₁, s₂, s₃, s₄` correspond to `sE, sP, sT, sU` below. The numerical model and solver are the same.
+
 Let `t` be tortilla servings and `u` tuna servings. Both are continuous and nonnegative. This is a ration subproblem. Fractional servings mean divisible contents, with handling and packaging abstracted. We do not propose carrying an open partial tuna pouch without appropriate food handling.
 
 | Parameter per serving | Tortilla t | Tuna u | Status |

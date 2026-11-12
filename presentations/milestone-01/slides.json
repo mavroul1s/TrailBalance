@@ -3,79 +3,151 @@
     "title": "TrailBalance",
     "kind": "cover",
     "subtitle": "One hiker, one ration, simplex",
-    "notes": "20 seconds. Introduce TrailBalance as the Linear Programming final project. This is the first progress milestone. The full proposal concerns equipment selection and fair group allocation. Today we study a smaller continuous problem that can be solved completely using the professor's primal simplex method."
+    "notes": "30 seconds. Introduce TrailBalance as the Linear Programming final project. This is the first progress milestone. The full proposal concerns equipment selection and fair group allocation. Today we study a smaller continuous problem that can be solved completely using the professor's primal simplex method.\n\nPresentation cues: Frame the project question in everyday terms: what food should one person pack when the rest of the necessary kit is already fixed? State that the talk will move from that decision to an LP and then follow two simplex pivots.",
+    "duration_seconds": 30
   },
   {
     "title": "One moderate day hike",
     "kind": "scenario",
     "source": "Scenario and masses: assumptions. Essential categories: [R3, R4]. Water guideline: [R4].",
-    "notes": "45 seconds. Assume one 70 kg adult, a marked 10 km route, 500 m ascent and four hours in mild weather. The proposed moderate label is a project convention. Fix 2.3 kg of mandatory kit, including a separate emergency food reserve and packaging. Water starts from AHS guidance of about 0.5 L per hour in moderate conditions. Four hours gives 2 L, and we assume another 0.5 L reserve. Approximate water mass as 2.5 kg. The decision is how much of two foods to pack for a modeled ration, after protecting these fixed essentials. All kit masses are hypothetical and need measurement. Sources: [R3] https://www.nps.gov/articles/10essentials.htm [R4] https://americanhiking.org/10essentials/"
+    "notes": "75 seconds. Assume one 70 kg adult, a marked 10 km route, 500 m ascent and four hours in mild weather. The proposed moderate label is a project convention. Fix 2.3 kg of mandatory kit, including a separate emergency food reserve and packaging. Water starts from AHS guidance of about 0.5 L per hour in moderate conditions. Four hours gives 2 L, and we assume another 0.5 L reserve. Approximate water mass as 2.5 kg. The decision is how much of two foods to pack for a modeled ration, after protecting these fixed essentials. All kit masses are hypothetical and need measurement. Sources: [R3] https://www.nps.gov/articles/10essentials.htm [R4] https://americanhiking.org/10essentials/\n\nPresentation cues: Name the basic fixed supplies before introducing optimization: navigation and backup power, a warm layer and rain shell, light, first aid, emergency shelter and sun protection. The fixed-kit appendix gives the assumed masses. Explain that these supplies, the emergency food reserve and the water remain in the pack throughout the example. Pause on the decision sentence so the audience understands exactly what the optimization can change.",
+    "duration_seconds": 75
   },
   {
     "title": "Carrying allowance and personal inputs",
     "kind": "table",
-    "table": [["Input", "Evidence", "This milestone"], ["Body mass", "General day-pack guideline", "10% × 70 kg = 7 kg"], ["Age", "Older-adult load studies", "No age multiplier"], ["Sex / gender", "Population-specific sex findings", "No blanket coefficient"], ["Height", "Torso and hip fit matter", "No height-to-load formula"]],
-    "widths": [210, 480, 462],
+    "table": [
+      [
+        "Input",
+        "Evidence",
+        "This milestone"
+      ],
+      [
+        "Body mass",
+        "General day-pack guideline",
+        "10% × 70 kg = 7 kg"
+      ],
+      [
+        "Age",
+        "Older-adult load studies",
+        "No age multiplier"
+      ],
+      [
+        "Sex / gender",
+        "Population-specific sex findings",
+        "No blanket coefficient"
+      ],
+      [
+        "Height",
+        "Torso and hip fit matter",
+        "No height-to-load formula"
+      ]
+    ],
+    "widths": [
+      210,
+      480,
+      462
+    ],
     "bottom": "The reviewed sources do not validate one personal capacity equation from these four inputs.",
     "source": "[R5] REI pack-weight guidance. [R6] REI pack fitting. [R9] Walsh et al., 2018. [R10] Vickery-Howe et al., 2024.",
-    "notes": "45 seconds. The 7 kg allowance is a transparent planning heuristic, not a medical safety threshold. REI describes about 10% of body mass for a loaded day pack and acknowledges exceptions. The age study concerns 14 older adults in short trials and does not estimate an age multiplier. The sex study involves 23 soldiers and is not a universal recreational-hiking formula. Biological sex findings should not be converted into a coefficient for gender identity. For fit, measure torso and hip dimensions rather than infer capacity from overall height. Future capacity remains an externally chosen input until personalization is validated. [R5] https://www.rei.com/learn/expert-advice/backpacking-weight.html [R6] https://www.rei.com/learn/expert-advice/backpacks-adjusting-fit.html [R9] https://doi.org/10.1016/j.jbiomech.2018.03.018 [R10] https://doi.org/10.3390/biomechanics4030027"
+    "notes": "75 seconds. The 7 kg allowance is a transparent planning heuristic, not a medical safety threshold. REI describes about 10% of body mass for a loaded day pack and acknowledges exceptions. The age study concerns 14 older adults in short trials and does not estimate an age multiplier. The sex study involves 23 soldiers and is not a universal recreational-hiking formula. Biological sex findings should not be converted into a coefficient for gender identity. For fit, measure torso and hip dimensions rather than infer capacity from overall height. Future capacity remains an externally chosen input until personalization is validated. [R5] https://www.rei.com/learn/expert-advice/backpacking-weight.html [R6] https://www.rei.com/learn/expert-advice/backpacks-adjusting-fit.html [R9] https://doi.org/10.1016/j.jbiomech.2018.03.018 [R10] https://doi.org/10.3390/biomechanics4030027\n\nPresentation cues: Distinguish the roles of the inputs: body mass supplies a transparent example allowance, while age and biological sex motivate further research and height relates to fit. A future website can record a user-chosen planning limit without claiming that demographic inputs determine a medically safe load. Emphasize that the evidence limitation is part of the model design, so the audience knows where the optimization ends and an external input begins.",
+    "duration_seconds": 75
   },
   {
     "title": "The ration data",
     "kind": "table",
-    "table": [["Per serving", "Tortilla t", "Tuna u"], ["Edible mass", "50 g", "74 g"], ["Food energy", "140 kcal", "70 kcal"], ["Protein", "4 g", "17 g"], ["Available servings", "6", "2"]],
-    "widths": [430, 360, 362],
+    "table": [
+      [
+        "Per serving",
+        "Tortilla t",
+        "Tuna u"
+      ],
+      [
+        "Edible mass",
+        "50 g",
+        "74 g"
+      ],
+      [
+        "Food energy",
+        "140 kcal",
+        "70 kcal"
+      ],
+      [
+        "Protein",
+        "4 g",
+        "17 g"
+      ],
+      [
+        "Available servings",
+        "6",
+        "2"
+      ]
+    ],
+    "widths": [
+      430,
+      360,
+      362
+    ],
     "bottom": "Assumed ration targets: at least 630 kcal and 33 g protein. Servings are continuous.",
     "source": "Label data: [R7] Mission Restaurant Style tortillas, [R8] StarKist 74 g tuna pouch. Inventory and targets: assumptions.",
-    "notes": "50 seconds. The manufacturer label for this specific Mission Restaurant Style tortilla declares 50 g, 140 kcal and 4 g protein. The 74 g StarKist pouch declares 70 kcal and 17 g protein. Avoid mixing the tortilla with a different 49 g listing. These are rounded nutrition-label declarations. We choose inventories 6 and 2 and targets 630 kcal and 33 g protein to make a readable example. These targets define one modeled ration, not total metabolic needs or a personal diet. Fractional servings are mathematically allowed, representing divisible contents. Handling and packaging are abstracted. The final optimum happens to use whole servings. [R7] https://www.missionfoods.com/products/soft-taco-restaurant-style-flour-tortillas and https://www.missionfoods.com/wp-content/uploads/2022/07/product-soft-taco-restaurant-style-flour-tortillas-nf.png [R8] https://starkist.com/product/light-tuna-in-water-pouch/"
+    "notes": "75 seconds. The manufacturer label for this specific Mission Restaurant Style tortilla declares 50 g, 140 kcal and 4 g protein. The 74 g StarKist pouch declares 70 kcal and 17 g protein. Avoid mixing the tortilla with a different 49 g listing. These are rounded nutrition-label declarations. We choose inventories 6 and 2 and targets 630 kcal and 33 g protein to make a readable example. These targets define one modeled ration, not total metabolic needs or a personal diet. Fractional servings are mathematically allowed, representing divisible contents. Handling and packaging are abstracted. The final optimum happens to use whole servings. [R7] https://www.missionfoods.com/products/soft-taco-restaurant-style-flour-tortillas and https://www.missionfoods.com/wp-content/uploads/2022/07/product-soft-taco-restaurant-style-flour-tortillas-nf.png [R8] https://starkist.com/product/light-tuna-in-water-pouch/\n\nPresentation cues: Walk through one column of the table aloud. Two tortilla servings contribute 100 g, 280 kcal and 8 g protein, because each quantity scales linearly with servings. The same idea gives the coefficients for tuna. Explain that we keep the targets separate from the label data: the manufacturers provide the per-serving values, while this classroom scenario chooses the targets and available quantities. Pause to establish the units before showing inequalities.",
+    "duration_seconds": 75
   },
   {
     "title": "The minimum-mass LP",
     "kind": "model",
     "source": "LP formulation: project derivation using [R1, R2]. Targets and kit masses are assumptions.",
-    "notes": "60 seconds. Minimize edible food mass M=50t+74u. Require 140t+70u at least 630 kcal and 4t+17u at least 33 g protein. Inventory bounds are 0<=t<=6 and 0<=u<=2. The total pack is 4800+M grams and must be at most 7000 grams. However, the entire food inventory weighs only 448 g, so every point in the inventory box is below the capacity limit. Capacity is redundant in this instance and can be removed before solving. The interesting tradeoff is the ration composition. All coefficients are constants and variables are continuous, making this an LP. Minimizing food mass also reduces this hiker's weight utilization when the other load and capacity are fixed. [R1] The Simplex Method in Matrix Notation, 26 October 2026, physical pp. 3-8. [R2] Matousek and Gartner, 2007, https://doi.org/10.1007/978-3-540-30717-4"
+    "notes": "105 seconds. Minimize edible food mass M=50t+74u. Require 140t+70u at least 630 kcal and 4t+17u at least 33 g protein. Inventory bounds are 0<=t<=6 and 0<=u<=2. The total pack is 4800+M grams and must be at most 7000 grams. However, the entire food inventory weighs only 448 g, so every point in the inventory box is below the capacity limit. Capacity is redundant in this instance and can be removed before solving. The interesting tradeoff is the ration composition. All coefficients are constants and variables are continuous, making this an LP. Minimizing food mass also reduces this hiker's weight utilization when the other load and capacity are fixed. [R1] The Simplex Method in Matrix Notation, 26 October 2026, physical pp. 3-8. [R2] Matousek and Gartner, 2007, https://doi.org/10.1007/978-3-540-30717-4\n\nPresentation cues: Introduce the variables before reading the constraints. For the energy inequality, explain why the direction is at least: the ration must cover its stated target. For the inventory bounds, explain why the direction is at most: the model cannot pack more food than is available. Check the full stock numerically: 6 tortillas and 2 tuna servings weigh 448 g, so 4800+448=5248 g remains below 7000 g. This establishes why the capacity constraint can be removed without changing the feasible ration set. Allow time for the audience to follow each inequality.",
+    "duration_seconds": 105
   },
   {
     "title": "A feasible maximization form",
     "kind": "transform",
     "source": "Equivalent reformulation: project derivation. Course starting form and slack basis: [R1], physical pp. 3-8.",
-    "notes": "65 seconds. The professor starts from a maximization LP with <= inequalities and a feasible basis. Define yT=6-t and yU=2-u as servings removed from the full inventory. Original mass is 448-50yT-74yU, so maximize removed mass. The full inventory has 980 kcal and 58 g protein. We may remove at most 350 kcal and 25 g protein. Keep removal bounds yT<=6 and yU<=2 and nonnegativity. At y=(0,0), all food is packed and all targets are satisfied. Add slacks to obtain the identity basis. No Phase I is needed for this instance. Directly negating >= nutrition constraints would not produce a feasible all-slack basis. [R1] The Simplex Method in Matrix Notation, physical pp. 3-8. [R2] https://doi.org/10.1007/978-3-540-30717-4"
+    "notes": "105 seconds. The professor starts from a maximization LP with <= inequalities and a feasible basis. Define yT=6-t and yU=2-u as servings removed from the full inventory. Original mass is 448-50yT-74yU, so maximize removed mass. The full inventory has 980 kcal and 58 g protein. We may remove at most 350 kcal and 25 g protein. Keep removal bounds yT<=6 and yU<=2 and nonnegativity. At y=(0,0), all food is packed and all targets are satisfied. Add slacks to obtain the identity basis. No Phase I is needed for this instance. Directly negating >= nutrition constraints would not produce a feasible all-slack basis. [R1] The Simplex Method in Matrix Notation, physical pp. 3-8. [R2] https://doi.org/10.1007/978-3-540-30717-4\n\nPresentation cues: Work through the reformulation aloud: substituting t=6-yT and u=2-yU gives energy 980-140yT-70yU. Requiring this to be at least 630 is equivalent to allowing removal of at most 350 kcal. Do the same with protein: 58-4yT-17yU must remain at least 33, so removal uses at most 25 g protein. Finally explain why minimizing 448 minus removed mass is the same as maximizing removed mass. Pause on the starting point: zero removal means a full feasible ration.",
+    "duration_seconds": 105
   },
   {
     "title": "The professor's simplex convention",
     "kind": "algorithm",
     "source": "[R1] The Simplex Method in Matrix Notation, physical pp. 6-11. Supporting reading: [R2], Chapter 5.",
-    "notes": "60 seconds. B is the matrix of basic columns, N contains nonbasic columns. Set xN=0 and solve xB=B^-1 b. The lecture defines zN=N^T B^-T cB-cN and writes the objective as zeta=zeta*-zN^T xN. A negative z value therefore improves the maximization objective. Enter a variable with negative z. Solve d=B^-1 a_j. Use the minimum xB_i/d_i over positive direction components to keep all basic variables nonnegative, and let a minimum-ratio variable leave. Recompute or update the dictionary and repeat. Stop when all zN are nonnegative. Degeneracy can produce zero-length steps, so the general method may require an anti-cycling rule. The appendix and code record the lecture's dual updates too. [R1] physical pp. 6-11. [R2] https://doi.org/10.1007/978-3-540-30717-4"
+    "notes": "105 seconds. B is the matrix of basic columns, N contains nonbasic columns. Set xN=0 and solve xB=B^-1 b. The lecture defines zN=N^T B^-T cB-cN and writes the objective as zeta=zeta*-zN^T xN. A negative z value therefore improves the maximization objective. Enter a variable with negative z. Solve d=B^-1 a_j. Use the minimum xB_i/d_i over positive direction components to keep all basic variables nonnegative, and let a minimum-ratio variable leave. Recompute or update the dictionary and repeat. Stop when all zN are nonnegative. Degeneracy can produce zero-length steps, so the general method may require an anti-cycling rule. The appendix and code record the lecture's dual updates too. [R1] physical pp. 6-11. [R2] https://doi.org/10.1007/978-3-540-30717-4\n\nPresentation cues: Explain the first basis concretely before using the matrix notation. The four slack columns form an identity matrix, so the basic values initially equal b=(350,25,6,2). Their objective coefficients are zero, which makes the initial reduced costs simply minus the food-mass coefficients: (-50,-74). State that a slack measures unused removal allowance, rather than an extra physical item. Describe the ratio test as asking which allowance runs out first while an entering variable increases. Leave a short pause before applying that rule to the numerical table.",
+    "duration_seconds": 105
   },
   {
     "title": "Pivot 1: tuna removal enters",
     "kind": "pivot1",
     "source": "Exact calculations from the project LP using [R1], steps 1-5. Slack names: energy E, protein P, inventory T and U.",
-    "notes": "60 seconds. Initial basis is (sE,sP,sT,sU), values (350,25,6,2), and reduced costs for (yT,yU) are (-50,-74). Choose yU because it has the most negative reduced cost. Its direction is (70,17,0,1). Eligible ratios are 5,25/17,2, ignoring the zero direction. The minimum is 25/17, so protein slack sP leaves. We now remove 25/17 tuna servings, with yT still zero. The new basis is (sE,yU,sT,sU), values (4200/17,25/17,6,9/17). Removed mass is 1850/17 g, about 108.824 g. Fractional intermediate points are permitted in the LP. [R1] physical pp. 9-11. Full exact trace: docs/milestone-01-model.md."
+    "notes": "90 seconds. Initial basis is (sE,sP,sT,sU), values (350,25,6,2), and reduced costs for (yT,yU) are (-50,-74). Choose yU because it has the most negative reduced cost. Its direction is (70,17,0,1). Eligible ratios are 5,25/17,2, ignoring the zero direction. The minimum is 25/17, so protein slack sP leaves. We now remove 25/17 tuna servings, with yT still zero. The new basis is (sE,yU,sT,sU), values (4200/17,25/17,6,9/17). Removed mass is 1850/17 g, about 108.824 g. Fractional intermediate points are permitted in the LP. [R1] physical pp. 9-11. Full exact trace: docs/milestone-01-model.md.\n\nPresentation cues: Read the ratios as limits on the same step. Energy allows removal of 5 tuna servings, protein allows 25/17, and the inventory allows 2. We must respect all of them, so the smallest eligible value controls the step. The zero direction for tortilla inventory imposes no limit in this pivot. Point out that 25/17 is less than 2, so protein becomes tight before the tuna stock runs out. Pause at the leaving variable before moving to the next basis.",
+    "duration_seconds": 90
   },
   {
     "title": "Pivot 2: tortilla removal enters",
     "kind": "pivot2",
     "source": "Exact project calculations using [R1]. Final reduced costs follow the lecture's sign convention.",
-    "notes": "60 seconds. The remaining decision variable yT has reduced cost -554/17, so it enters. In current basis order (sE,yU,sT,sU), the direction is (2100/17,4/17,1,-4/17). Ratios for positive directions are 2,25/4,6. Thus step 2 makes energy slack sE leave. The final basis is (yT,yU,sT,sU) with values (2,1,4,1). Removed mass is 174 g. Nonbasic slack reduced costs are z_sE=277/1050 and z_sP=49/15, both positive. All slacks and basic values remain nonnegative, so the solution is feasible and optimal. [R1] physical pp. 9-11. Full arithmetic and dual updates: docs/milestone-01-model.md."
+    "notes": "90 seconds. The remaining decision variable yT has reduced cost -554/17, so it enters. In current basis order (sE,yU,sT,sU), the direction is (2100/17,4/17,1,-4/17). Ratios for positive directions are 2,25/4,6. Thus step 2 makes energy slack sE leave. The final basis is (yT,yU,sT,sU) with values (2,1,4,1). Removed mass is 174 g. Nonbasic slack reduced costs are z_sE=277/1050 and z_sP=49/15, both positive. All slacks and basic values remain nonnegative, so the solution is feasible and optimal. [R1] physical pp. 9-11. Full arithmetic and dual updates: docs/milestone-01-model.md.\n\nPresentation cues: Explain the negative direction for sU: as yT increases along this basis direction, yU decreases, so the tuna-inventory slack grows instead of shrinking. It cannot be the limiting row in this step. Compare the eligible ratios 2, 25/4 and 6, then use step 2. Explain what the final reduced-cost test says: increasing either nonbasic slack from zero would decrease removed mass. The current basis therefore gives the best removal objective while preserving feasibility.",
+    "duration_seconds": 90
   },
   {
     "title": "The optimal ration",
     "kind": "result",
     "source": "Classroom LP result. Both ration targets bind. Pack capacity remains slack. Source data: [R7, R8].",
-    "notes": "50 seconds. Translate removals back to packed quantities. t=6-2=4 tortilla servings, u=2-1=1 tuna serving. Food mass is 274 g, energy is 630 kcal and protein is 33 g. Fixed kit 2300 g plus water 2500 g plus food 274 g gives 5074 g or 5.074 kg, leaving 1.926 kg below the 7 kg planning cap. The chart follows the successive removal decisions (0,0), (0,25/17) and (2,1), showing the two straight simplex pivot segments. This is an exact optimum for the stated LP. The separate emergency reserve remains fixed. The ration is not a full dietary or safety assessment. [R7] https://www.missionfoods.com/products/soft-taco-restaurant-style-flour-tortillas [R8] https://starkist.com/product/light-tuna-in-water-pouch/"
+    "notes": "75 seconds. Translate removals back to packed quantities. t=6-2=4 tortilla servings, u=2-1=1 tuna serving. Food mass is 274 g, energy is 630 kcal and protein is 33 g. Fixed kit 2300 g plus water 2500 g plus food 274 g gives 5074 g or 5.074 kg, leaving 1.926 kg below the 7 kg planning cap. The chart follows the successive removal decisions (0,0), (0,25/17) and (2,1), showing the two straight simplex pivot segments. This is an exact optimum for the stated LP. The separate emergency reserve remains fixed. The ration is not a full dietary or safety assessment. [R7] https://www.missionfoods.com/products/soft-taco-restaurant-style-flour-tortillas [R8] https://starkist.com/product/light-tuna-in-water-pouch/\n\nPresentation cues: Use the chart to retell the calculation in plain language: begin with the full food stock, remove some tuna in the first pivot, then exchange part of that removal for tortilla removal in the second pivot. Convert the final removal point (2,1) back into what goes into the pack. Check both food targets aloud and distinguish the 274 g optimized ration from the 2.3 kg fixed kit and 2.5 kg water. Allow a short pause before giving the pack margin.",
+    "duration_seconds": 75
   },
   {
     "title": "Reference map",
     "kind": "references_short",
     "source": "Full citations and URLs appear in the appendix, speaker notes and references/REFERENCES.md. Accessed 12 November 2026.",
-    "notes": "20 seconds. Every outside claim is tied to a source ID. R1 is the supplied course handout, and R2 is the requested Matousek and Gartner textbook. R3 and R4 support basic supplies and water guidance. R5 and R6 are practical pack-weight and fit guidance. R7 and R8 provide food-label coefficients. R9 and R10 give population-specific load-carriage evidence and explain why we avoid a demographic capacity formula. Full sources are in the appendix and repository reference ledger. Instructor attribution for R1 needs confirmation because the PDF does not name an author."
+    "notes": "30 seconds. Every outside claim is tied to a source ID. R1 is the supplied course handout, and R2 is the requested Matousek and Gartner textbook. R3 and R4 support basic supplies and water guidance. R5 and R6 are practical pack-weight and fit guidance. R7 and R8 provide food-label coefficients. R9 and R10 give population-specific load-carriage evidence and explain why we avoid a demographic capacity formula. Full sources are in the appendix and repository reference ledger. Instructor attribution for R1 needs confirmation because the PDF does not name an author.\n\nPresentation cues: Identify the course handout and requested textbook first, then group the practical and scientific references by what they support. Direct the audience to the full citations in the appendix if they want a specific source.",
+    "duration_seconds": 30
   },
   {
     "title": "Future work",
     "kind": "future",
     "source": "Proposed next milestones. Website, whole-item selection and group allocation remain future work.",
-    "notes": "45 seconds. The next presentation can add measured masses and volume, more foods and changed targets, including an infeasible scenario. Later introduce binary equipment decisions and show why a continuous LP relaxation can split items. Then restore the proposal's group minimax objective and shared-item assignments. A website should collect trip and inventory inputs and show an understandable packing list, source assumptions, binding constraints and capacity margin. A personal limit remains an explicit input, with evidence-based personalization as a separate research question. We are not implementing or solving the whole proposal in this first milestone."
+    "notes": "45 seconds. The next presentation can add measured masses and volume, more foods and changed targets, including an infeasible scenario. Later introduce binary equipment decisions and show why a continuous LP relaxation can split items. Then restore the proposal's group minimax objective and shared-item assignments. A website should collect trip and inventory inputs and show an understandable packing list, source assumptions, binding constraints and capacity margin. A personal limit remains an explicit input, with evidence-based personalization as a separate research question. We are not implementing or solving the whole proposal in this first milestone.\n\nPresentation cues: Close by stating the next small milestone: richer solo scenarios with measured inputs. Keep the website and full group MILP as later work so the development sequence stays consistent with the course presentations.",
+    "duration_seconds": 45
   },
   {
     "title": "Appendix: full matrix form",

@@ -14,4 +14,4 @@ The audience should understand one packing decision and see precisely how it bec
 
 The full minimax objective is deferred. Minimizing food mass is an interpretable special case of reducing one hiker's weight utilization when capacity, water and the rest of the kit are fixed and no volume objective is active.
 
-The class policy of small progress presentations comes from the user's description. No official course-policy document, presentation rubric, time limit or professor name was supplied. The initial deck therefore uses an approximately 10-minute English narrative with optional mathematical appendix slides. Verify submission and attribution requirements with the instructor before presenting.
+The class policy of small progress presentations comes from the user's description. The user specified English and approximately 15 minutes for this first presentation. The deck uses 12 main slides with a timed presenter plan and optional mathematical appendix slides. No official course-policy document, presentation rubric or professor name was supplied. Verify submission and attribution requirements with the instructor before presenting.

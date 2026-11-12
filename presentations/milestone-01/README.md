@@ -4,7 +4,7 @@
 
 **Audience:** Linear Programming class and instructor
 
-**Format:** English, approximately 10 minutes for the 12 main slides. Six appendix slides support questions and further study.
+**Format:** English, approximately 15 minutes for the 12 main slides. Six appendix slides support questions and further study.
 
 The [editable PowerPoint](TrailBalance-Milestone-01.pptx) and [PDF](TrailBalance-Milestone-01.pdf) accompany this directory. Full source URLs appear in speaker notes and reference slides. [Presenter notes](speaker-notes.md) include the timing and the questions worth rehearsing. [The model note](../../docs/milestone-01-model.md) contains every calculation.
 
